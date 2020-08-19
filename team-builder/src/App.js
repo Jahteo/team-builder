@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Form from "./components/Form"
 
@@ -24,7 +23,7 @@ function App() {
           </div>
         )
       })}
-      <Form />
+      <Form teamList={teamList} setTeamList={setTeamList} />
     </div>
   );
 }

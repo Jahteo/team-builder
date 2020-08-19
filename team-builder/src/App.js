@@ -5,12 +5,13 @@ import Form from "./components/Form"
 function App() {
   const initialTeamList = {
     name: "sofie",
-    email: "sofie@sofie.com",
+    email: "sofie@grumpiestdoggo.com",
     role: "mascot doggo"
+
   }
   const [teamList, setTeamList] = useState([initialTeamList])
 
-  console.log(teamList)
+  // console.log(teamList)
 
   return (
     <div className="App">

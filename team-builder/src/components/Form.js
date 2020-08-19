@@ -7,6 +7,15 @@ function Form ({ teamList, setTeamList }) {
         setMember({...member, [event.target.name]: [event.target.value]})
         console.log(member)
     }
+    const addNewMember = member => {
+        const newMember = {
+            id: Date.now(),
+            name: member.name,
+            email: member.email,
+            role: member.role
+        };
+        setTeamList([...teamList, newMember])
+    }
     return (
         <div>
             <form>

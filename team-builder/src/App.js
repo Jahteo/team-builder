@@ -4,6 +4,7 @@ import Form from "./components/Form"
 
 function App() {
   const initialTeamList = {
+    id: 777,
     name: "sofie",
     email: "sofie@grumpiestdoggo.com",
     role: "mascot doggo"

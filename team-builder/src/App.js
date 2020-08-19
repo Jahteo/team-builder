@@ -8,13 +8,21 @@ function App() {
     email: "sofie@sofie.com",
     role: "mascot doggo"
   }
-const [teamList, setTeamList] = useState([initialTeamList])
+  const [teamList, setTeamList] = useState([initialTeamList])
 
-console.log(teamList)
+  console.log(teamList)
 
-return (
+  return (
     <div className="App">
-
+      {teamList.map((member) => {
+        return(
+          <div>
+            <h2>{member.name}</h2>
+            <p>{member.email}</p>
+            <p>{member.role}</p>
+          </div>
+        )
+      })}
     </div>
   );
 }

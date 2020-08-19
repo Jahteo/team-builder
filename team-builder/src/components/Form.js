@@ -25,15 +25,15 @@ function Form ({ teamList, setTeamList }) {
     return (
         <div>
             <form onSubmit={submitForm}>
-                <label htmlFor="name">Name:
-                    <input id="name" type="text" placeholder="Type your favorite name here" onChange={handleChanges} value={member.name} name="name" />
-                </label>
-                <label htmlFor="email">Email:
-                    <input id="email" type="text" placeholder="Share your most secret email here" onChange={handleChanges} value={member.email} name="email" />
-                </label>
-                <label htmlFor="role">Role:
-                    <input id="role" type="text" placeholder="Fantasy programming title here" onChange={handleChanges} value={member.role} name="role" />
-                </label>
+                <label htmlFor="name">Name:&nbsp;
+                    <textarea id="name" placeholder="Type your favorite name here" onChange={handleChanges} value={member.name} name="name" />
+                </label><br />
+                <label htmlFor="email">Email:&nbsp;
+                    <textarea id="email" placeholder="Share your most secret email here" onChange={handleChanges} value={member.email} name="email" />
+                </label><br />
+                <label htmlFor="role">Role:&nbsp;
+                    <textarea id="role" placeholder="Fantasy programming title here" onChange={handleChanges} value={member.role} name="role" />
+                </label><br />
                 <button type="submit">Add Team Member</button>
             </form>
         </div>

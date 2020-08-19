@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 
 function Form ({ teamList, setTeamList }) {
-    const [member, setMember] = useState({name: "", email: "", role: ""})
+    const initialState = {name: "", email: "", role: ""}
+    const [member, setMember] = useState(initialState)
     // console.log(member)
     const handleChanges = (event) => {
         setMember({...member, [event.target.name]: [event.target.value]})
@@ -16,9 +17,14 @@ function Form ({ teamList, setTeamList }) {
         };
         setTeamList([...teamList, newMember])
     }
+    const submitForm = event => {
+        event.preventDefault();
+        addNewMember(member);
+        setMember(initialState);
+    }
     return (
         <div>
-            <form>
+            <form onSubmit={submitForm}>
                 <label htmlFor="name">Name:
                     <input id="name" type="text" placeholder="Type your favorite name here" onChange={handleChanges} value={member.name} name="name" />
                 </label>
@@ -28,6 +34,7 @@ function Form ({ teamList, setTeamList }) {
                 <label htmlFor="role">Role:
                     <input id="role" type="text" placeholder="Fantasy programming title here" onChange={handleChanges} value={member.role} name="role" />
                 </label>
+                <button type="submit">Add Team Member</button>
             </form>
         </div>
     )
